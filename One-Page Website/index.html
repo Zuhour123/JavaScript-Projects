@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro One-Page Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffdcb;
+            color: #333;
+        }
+
+        nav {
+            background-color: #ff6f61;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #f9a825;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+        }
+
+        section h2 {
+            color: #ff6f61;
+            text-align: center;
+        }
+
+        #home {
+            background-color: #ffeb3b;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        #home h1 {
+            font-size: 3em;
+            color: #c2185b;
+        }
+
+        #gallery {
+            background-color: #f1c40f;
+            text-align: center;
+        }
+
+        #gallery img {
+            margin: 10px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        #contact {
+            background-color: #e91e63;
+            color: white;
+            text-align: center;
+        }
+
+        #contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #c2185b;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #fff;
+        }
+
+        #contact input[type="submit"] {
+            background-color: #ffeb3b;
+            border: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #contact input[type="submit"]:hover {
+            background-color: #f9a825;
+        }
+
+        #video {
+            background-color: #80deea;
+            text-align: center;
+        }
+
+        #video video {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #lightbox-modal {
+            position: fixed;
+            z-index: 1000;
+            display: none;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        #lightbox-modal img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+        }
+
+        #lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <header>
+            <h1>Welcome to my One-Page Website</h1>
+            <p>Experience the retro vibes with a colorful one-page website!</p>
+        </header>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Images Gallery</h2>
+        <div>
+            <img src="https://c8.alamy.com/comp/ENDKXK/vintage-toons-retro-cartoon-amazed-or-frightened-character-surprised-ENDKXK.jpg" alt="Retro Image">
+            <img src="https://c8.alamy.com/comp/ENDKXK/vintage-toons-retro-cartoon-amazed-or-frightened-character-surprised-ENDKXK.jpg" alt="Retro Image">
+            <img src="https://c8.alamy.com/comp/ENDKXK/vintage-toons-retro-cartoon-amazed-or-frightened-character-surprised-ENDKXK.jpg" alt="Retro Image">
+            <img src="https://c8.alamy.com/comp/ENDKXK/vintage-toons-retro-cartoon-amazed-or-frightened-character-surprised-ENDKXK.jpg" alt="Retro Image">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Watch This Video</h2>
+        <video width="640" height="360" controls>
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 One-Page Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded image">
+    </div>
+
+    <!-- Lightbox Script -->
+    <script>
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('#gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxModal.style.display = 'block';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightboxModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                lightboxModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
