@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuhour Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+
+    <nav id="main-navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#video-feature">Video</a></li>
+            <li><a href="#contact-me" onclick="toggleContactForm()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1></h1>
+        <p class="intro-text">Welcome to my vibrant portfolio! Discover my work and passion for development.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>My Creations</h2>
+        <div class="slideshow-container-bright">
+            <div class="slide-bright fade-bright" style="display: block;">
+                <img src="assets/images/placeholder_gallery_1.jpg" alt="Gallery Image 1">
+                <div class="caption-bright">Project Showcase 1</div>
+            </div>
+            <div class="slide-bright fade-bright">
+                <img src="assets/images/placeholder_gallery_2.jpg" alt="Gallery Image 2">
+                <div class="caption-bright">Colorful Design Concepts</div>
+            </div>
+            <div class="slide-bright fade-bright">
+                <img src="assets/images/placeholder_gallery_3.jpg" alt="Gallery Image 3">
+                <div class="caption-bright">Interactive Web Apps</div>
+            </div>
+            <a class="prev-bright" onclick="plusGallerySlides(-1)">&#10094;</a>
+            <a class="next-bright" onclick="plusGallerySlides(1)">&#10095;</a>
+        </div>
+        <div class="dots-container-bright">
+            <span class="dot-bright active" onclick="currentGallerySlide(1)"></span>
+            <span class="dot-bright" onclick="currentGallerySlide(2)"></span>
+            <span class="dot-bright" onclick="currentGallerySlide(3)"></span>
+            </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content-bright">
+            <div class="about-text-bright">
+                <p>I'm a passionate developer with a love for creating intuitive and engaging digital experiences. My journey into tech started with [Your Story]...</p>
+                <p>Trained at <a href="https://www.learncodinganywhere.com" target="_blank" rel="noopener noreferrer">The Tech Academy</a>, I've gained skills in HTML, CSS, JavaScript, and more, always eager to learn and apply new technologies.</p>
+            </div>
+            <div class="about-image-bright">
+                <img src="assets/images/your_profile_photo_bright.jpg" alt="Your Name">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects & GitHub</h2>
+        <p>Here are some of the projects I've worked on. You can find more on my GitHub profile!</p>
+        <p class="center-text-bright"><a href="" target="_blank" class="github-button-bright">View GitHub Profile</a></p>
+        <div class="project-highlights-bright">
+            <div class="project-item-bright">
+                <h3>Project Alpha</h3>
+                <p>A brief description of your project...</p>
+            </div>
+            <div class="project-item-bright">
+                <h3>Project Beta</h3>
+                <p>Another interesting project description...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-feature">
+        <h2>Featured Video</h2>
+        <video controls>
+            <source src="assets/video/your_featured_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>A short video showcasing [what the video is about].</p>
+    </section>
+
+    <div id="contact-popup-bright" class="modal-bright" style="display:none;">
+        <div id="contact" class="modal-content-bright">
+            <span class="close-button-bright" onclick="toggleContactForm()">&times;</span>
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/your_form_id" method="POST">
+                <label for="name-bright">Name:</label>
+                <input type="text" id="name-bright" name="name" required>
+
+                <label for="email-bright">Email:</label>
+                <input type="email" id="email-bright" name="email" required>
+
+                <label for="message-bright">Message:</label>
+                <textarea id="message-bright" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;By Zuhour Eid . All Rights Reserved.</p>
+        <p><a href="" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
